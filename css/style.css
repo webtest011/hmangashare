@@ -1,0 +1,158 @@
+/* Đặt style tổng thể cho toàn bộ trang */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Header styling */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+/* Navigation styling */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Căn giữa các mục menu */
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* Main content */
+main {
+    padding: 20px 10px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+/* Manga list section */
+#manga-list ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+}
+
+#manga-list li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: calc(50% - 20px); /* Chiều rộng 50% trừ khoảng cách */
+    max-width: 200px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@manga-list li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#manga-list li a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+}
+
+#manga-list li img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+#manga-list li h3 {
+    font-size: 1.2rem;
+    padding: 10px;
+    background-color: #f4f4f4;
+    margin-top: 0;
+    text-transform: uppercase;
+}
+
+/* Phần hiển thị các trang truyện */
+#manga-content {
+    width: 100%; /* Chiếm toàn bộ chiều ngang */
+    max-width: 800px; /* Giới hạn chiều rộng tối đa */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow: hidden; /* Không để tràn nội dung */
+}
+
+/* Căn chỉnh hình ảnh */
+#manga-content #pages img {
+    width: 100%; /* Đảm bảo ảnh chiếm toàn bộ chiều rộng container */
+    height: auto; /* Giữ tỉ lệ gốc của ảnh */
+    display: block;
+    margin: 0 auto 10px; /* Căn giữa và thêm khoảng cách giữa các ảnh */
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+    bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    #manga-list li {
+        width: calc(100% - 20px); /* Chiếm toàn bộ chiều rộng với khoảng cách */
+    }
+
+    #manga-content {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+
+    #manga-list li img {
+        height: 200px; /* Điều chỉnh chiều cao ảnh */
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}
